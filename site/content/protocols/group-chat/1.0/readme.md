@@ -127,6 +127,9 @@ DIDComm V2 Example:
 ```
 
 ### group-chat-message Message
+
+A Group Chat message is broadcast to all group chat participants if authored by the `administrator`. If authored by a `participant`, the group chat message is sent to the `controller` which then forwards the message to group participants on behalf of the author.
+
 DIDComm V1 Example:
 ```json
 {
