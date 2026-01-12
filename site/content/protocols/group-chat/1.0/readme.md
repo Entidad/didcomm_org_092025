@@ -58,6 +58,12 @@ The Group Chat's `controller` agent or any one of the group `participant` agents
 ### group-chat-participant-profile
 By design, there is no personally identifying information (PII) shared between the group chat participants. The Group Chat `controller` does assign a participant `alias` (a human-readable pseudonymous identifier) to each `participant` that is used to identify the group participants. The `group-chat-participant-profile` enables a `participant` to change the participant `alias` and broadcast the change to the group via the `controller` agent path. To `forward` the received message, the `controller` agent must iterate through each of the `active` participants (omitting the message `sender`) and emit a `group-chat-participant-profile` with the updated participant meta-data.
 
+## Composition
+
+Supported Goal Code | Notes
+--- | ---
+groupchat-messaging | A goal code used by `group-chat` protocol supporting agents. The goal code is applied to an [out-of-band](https://didcomm.org/out-of-band/2.0/) invitation message embedded in the `group-chat-invitation` message.
+
 
 ## Messages
 ### group-chat-invitation Request Message
